@@ -61,3 +61,55 @@ const handleNumber = (digit) => {
     calculator.displayValue += digit;
   }
 }
+
+const handleOperator = (op) => {
+  if (calculator.displayValue.includes('Error')) return;
+  const { firstOperand, displayValue, operator } = calculator;
+  
+  if (operator && !calculator.waitingForSecondOperand) {
+    const result = calculate(firstOperand, operator, displayValue);
+    logHistory(firstOperand, operator, displayValue, result);
+    calculator.displayValue = String(result);
+    calculator.firstOperand = result;
+  } else {
+    calculator.firstOperand = displayValue;
+  }
+
+  calculator.waitingForSecondOperand = true;
+  calculator.operator = op;
+}
+
+const calculate = (first, operator, second) => {
+  const a = parseFloat(first);
+  const b = parseFloat(second);
+  let result;
+  switch (operator) {
+    case '/':
+      if (b === 0) {
+        return 'Error'
+      }
+      result = a / b;
+      break;
+    case '*':
+      result = a * b;
+      break;
+    case '+':
+      result = a + b;
+      break
+    case '-':
+      result = a - b;
+      break
+    default:
+      result = second;
+    }
+  if (!isFinite(result)) {
+    return 'Error'
+  }
+  const resultString = String(roundResult(result));
+
+  if (resultString.length > 16) {
+    return 'Error: Too Large';
+  }
+  
+  return roundResult(result);
+}
