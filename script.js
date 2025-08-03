@@ -6,6 +6,8 @@ const calculator ={
   firstOperand: null,
   operator: null,
   waitingForSecondOperand: false,
+  lastOperator: null,
+  lastSecondOperand: null,
 }
 const PRECISION = 1e10;
 const roundResult = (num) => Math.round(num * PRECISION) / PRECISION;
@@ -77,6 +79,35 @@ const handleOperator = (op) => {
 
   calculator.waitingForSecondOperand = true;
   calculator.operator = op;
+}
+
+const handleEquals = () => {
+  if (calculator.displayValue.includes('Error')) return;
+  const { 
+    firstOperand, 
+    displayValue, 
+    operator, 
+    lastOperator, 
+    lastSecondOperand 
+  } = calculator;
+
+  if (operator && !calculator.waitingForSecondOperand) {
+    const result = calculate(firstOperand, operator, displayValue);
+    logHistory(firstOperand, operator, displayValue, result);
+    calculator.displayValue = String(result);
+    calculator.firstOperand = result;
+    calculator.lastOperator = operator;
+    calculator.lastSecondOperand = displayValue;
+  } else if (lastOperator) {
+    const currentDisplay = displayValue; 
+    const result = calculate(displayValue, lastOperator, lastSecondOperand);
+    logHistory(currentDisplay, lastOperator, lastSecondOperand, result);
+    calculator.displayValue = String(result);
+    calculator.firstOperand = result;
+  }
+
+  calculator.waitingForSecondOperand = true;
+  calculator.operator = null; 
 }
 
 const calculate = (first, operator, second) => {
