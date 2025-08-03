@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'IBM Plex Mono';
+    src: url('../fonts/IBMPlexMono-Regular.ttf') format('truetype');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,4 +11,17 @@
 
 html {
     font-size: 16px;
+    font-family: 'IBM Plex Mono', monospace, system-ui;
+}
+
+html, body {
+    height: 100%;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: #020202;
+}
+
+body {
+    display: grid;
+    place-items: center;
 }
