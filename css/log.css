@@ -1,0 +1,23 @@
+.terminal-log {
+  border: 5px solid black;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  text-align: right;
+  width: 20vw;
+  height: 70vh;
+  padding:1.5rem;
+  gap: 1rem;
+  background-color: #010101;
+  color: #32D77F;
+  flex-basis: 40%;
+  overflow: hidden;
+}
+
+.log-entry, .log-result {
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+  font-size: clamp(0.8rem, 3vw, 1.3rem);
+  text-shadow: 0 0 5px rgba(51, 255, 51, 0.4), 0 0 8px rgba(51, 255, 51, 0.2);
+  word-break: break-all;
+}
