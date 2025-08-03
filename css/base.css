@@ -25,3 +25,11 @@ body {
     display: grid;
     place-items: center;
 }
+
+.vtc-container {
+    display: flex;
+    width: 90%;
+    max-width: 900px;
+    min-width: 200px;
+    border-radius: 8px;
+}

@@ -14,6 +14,8 @@ const roundResult = (num) => Math.round(num * PRECISION) / PRECISION;
 
 function updateDisplay() {
   display.textContent = calculator.displayValue;
+  display.innerHTML = `${calculator.displayValue}<span class="cursor">_</span>`;
+  document.querySelector('.calculator-display').dataset.text = calculator.displayValue;
 }
 updateDisplay();
 
@@ -164,4 +166,20 @@ const calculate = (first, operator, second) => {
   }
   
   return roundResult(result);
+}
+
+const logHistory = (first, operator, second, result) => {
+  const logEntry = document.createElement('p');
+  logEntry.classList.add('log-entry');
+  logEntry.textContent = `> ${first} ${operator} ${second}`;
+
+  const resultEntry = document.createElement('p');
+  resultEntry.classList.add('log-result');
+  resultEntry.textContent = `= ${result}`;
+
+  historyLog.prepend(resultEntry);
+  historyLog.prepend(logEntry);
+  if (historyLog.children.length > 15) {
+    historyLog.lastChild.remove();
+  }
 }
