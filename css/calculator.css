@@ -1,1 +1,11 @@
-
+.calculator {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  height: 70vh;
+  padding: clamp(15px, 3vw, 25px);
+  gap: clamp(10px, 2vw, 20px);
+  background-color: #000000;
+  flex-basis: 60%;
+}
