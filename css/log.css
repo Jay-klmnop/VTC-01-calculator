@@ -21,3 +21,13 @@
   text-shadow: 0 0 5px rgba(51, 255, 51, 0.4), 0 0 8px rgba(51, 255, 51, 0.2);
   word-break: break-all;
 }
+
+@media (max-width: 768px) {
+  .terminal-log {
+    width: 100%;
+    flex-basis: 40%;
+    max-height: 400px;
+    overflow: hidden;
+  }
+}
+
