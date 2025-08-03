@@ -64,6 +64,27 @@ const handleNumber = (digit) => {
   }
 }
 
+const handleFunction = (fn) => {
+  switch(fn){
+    case 'CLR':
+      calculator.displayValue = '0';
+      calculator.firstOperand = null;
+      calculator.operator = null;
+      calculator.waitingForSecondOperand = false; 
+      break;
+    case '+/-':
+      if (calculator.displayValue !== 'Error') {
+        calculator.displayValue = String(parseFloat(calculator.displayValue) * -1);
+      }
+      break;
+    case '%':
+      if (calculator.displayValue !== 'Error') {
+        calculator.displayValue = String(parseFloat(calculator.displayValue) / 100);
+      }
+      break;
+  }
+}
+
 const handleOperator = (op) => {
   if (calculator.displayValue.includes('Error')) return;
   const { firstOperand, displayValue, operator } = calculator;
