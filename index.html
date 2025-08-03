@@ -5,35 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtual Terminal Calculator</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/calculator.css">
+    <link rel="stylesheet" href="css/display.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/log.css">
 </head>
 <body>
-    <div class="calculator">
-        <div class="calculator-display">
-            <header>
-                <div class="logo">Virtual Terminal Calculator - 01</div>
-            </header>
-            <p class="display-txt"></p>
+    <main class="vtc-container">
+        <div class="calculator">
+            <div class="calculator-display">
+                <header>
+                    <div class="logo">Virtual Terminal Calculator - 01</div>
+                </header>
+                <p class="display-txt"></p>
+            </div>
+            <div class="buttons">
+                <button class="function button">CLR</button>
+                <button class="function button">+/-</button>
+                <button class="function button">%</button>
+                <button class="operator button">/</button>
+                <button class="number button">7</button>
+                <button class="number button">8</button>
+                <button class="number button">9</button>
+                <button class="operator button">*</button>
+                <button class="number button">4</button>
+                <button class="number button">5</button>
+                <button class="number button">6</button>
+                <button class="operator button">+</button>
+                <button class="number button">1</button>
+                <button class="number button">2</button>
+                <button class="number button">3</button>
+                <button class="operator button">-</button>
+                <button class="number zero button">0</button>
+                <button class="number button dot">.</button>
+                <button class="equals button">=</button>
+            </div>
         </div>
-        <div class="buttons">
-            <button class="function button">CLR</button>
-            <button class="function button">+/-</button>
-            <button class="function button">%</button>
-            <button class="operator button">/</button>
-            <button class="number button">7</button>
-            <button class="number button">8</button>
-            <button class="number button">9</button>
-            <button class="operator button">*</button>
-            <button class="number button">4</button>
-            <button class="number button">5</button>
-            <button class="number button">6</button>
-            <button class="operator button">+</button>
-            <button class="number button">1</button>
-            <button class="number button">2</button>
-            <button class="number button">3</button>
-            <button class="operator button">-</button>
-            <button class="number zero button">0</button>
-            <button class="number button dot">.</button>
-            <button class="equals button">=</button>
-        </div>
-    </div>
+    </main>
 </body>
