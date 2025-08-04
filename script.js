@@ -40,6 +40,18 @@ allButtons.addEventListener('click', (event) => {
 });
 
 const handleNumber = (digit) => {
+  if (digit === '00') {
+    if (calculator.displayValue === '0') {
+      return;
+    } else if (calculator.displayValue !== '0' && calculator.waitingForSecondOperand === true) {
+      return;
+    } else {
+      if (calculator.displayValue.length <= 14) {
+        calculator.displayValue += digit;
+      }
+    }
+  }
+
   if (calculator.waitingForSecondOperand) {
     calculator.displayValue = digit;
     calculator.waitingForSecondOperand = false;
@@ -63,6 +75,10 @@ const handleNumber = (digit) => {
     calculator.displayValue = digit;
   } else {
     calculator.displayValue += digit;
+  }
+
+  if (digit === '00' && calculator.displayValue === '0') {
+
   }
 }
 
