@@ -1,0 +1,55 @@
+header,
+.history-log {
+  position: relative;
+  z-index: 2;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  text-align: center;
+  line-height: 1;
+  width: 100%;
+  font-weight: bold;
+  font-size: clamp(0.4rem, 1.5vw, 1rem);
+  flex-shrink: 0;
+  gap: 0.5rem;
+  padding: 0 0.5rem;
+  margin-bottom: 0.5rem;
+  box-sizing: border-box;
+}
+
+.header-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+.icon {
+  position: relative;
+  top: -0.04rem;
+}
+
+.online {
+  font-size: clamp(0.3rem, 1.05vw, 0.75rem);
+  color: lime;
+}
+
+.record {
+  color: red;
+  padding-right: 0.1rem;
+}
+
+.system-clock {
+  font-family: 'IBM Plex Mono', monospace;
+  color: #88EC82;
+  text-shadow: 0 0 5px rgba(51, 255, 51, 0.4), 0 0 8px rgba(51, 255, 51, 0.2);
+}

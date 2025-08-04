@@ -27,17 +27,16 @@
   top: 1.25%;
   left: 3%;
   text-align: center;
-  background: linear-gradient(145deg, #777, #444);
-  border: 1px solid #999;
+  background: linear-gradient(145deg, #999999, #444);
+  border: 1px solid #8b8b8b;
   border-radius: 3px;
-  box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
   padding: clamp(3px, 1vw, 8px) clamp(6px, 2vw, 15px);
   color: #1a1a1a;
   font-family: 'IBM Plex Mono', monospace;
   font-size: clamp(0.4rem, 1.5vw, 0.8rem);
   font-weight: bold;
-  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.2);
-  box-shadow: 4px 4px 6px rgba(0,0,0,0.5);
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.486);
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
   letter-spacing: 2px;
 }
 
@@ -71,7 +70,7 @@
   width: clamp(30px, 7vw, 40px);
   height: clamp(30px, 7vw, 40px);
   border-radius: 50%;
-  border: 2px solid #111;
+  border: 2px solid #202020;
   padding: 1%;
   background: radial-gradient(circle at top left, #1d1d1d, #181818);
   box-shadow: 4px 4px 6px rgba(0,0,0,0.5);

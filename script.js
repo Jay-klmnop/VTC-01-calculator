@@ -179,7 +179,29 @@ const logHistory = (first, operator, second, result) => {
 
   historyLog.prepend(resultEntry);
   historyLog.prepend(logEntry);
-  if (historyLog.children.length > 15) {
+  if (historyLog.children.length > 10) {
     historyLog.lastChild.remove();
   }
 }
+
+function startSystemClock() {
+  const clockElement = document.getElementById('system-clock');
+
+  if (!clockElement) {
+    return;
+  }
+
+  setInterval(() => {
+    const now = new Date();
+    const year = String(now.getFullYear());
+    const month = String(now.getMonth()).padStart(2, '0');
+    const date = String(now.getDate()).padStart(2, '0');
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    const timeString = `${year}.${month}.${date} ${hours}:${minutes}:${seconds}`;
+    clockElement.textContent = timeString;
+  }, 1000);
+}
+
+startSystemClock();

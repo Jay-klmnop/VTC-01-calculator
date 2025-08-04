@@ -31,13 +31,6 @@
   z-index: 1; 
 }
 
-header,
-.history-log,
-.display-txt {
-  position: relative;
-  z-index: 2;
-}
-
 .display-design {
   display: flex;
   flex-direction: column;
@@ -71,31 +64,8 @@ header,
   opacity: 0.6;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  font-weight: bold;
-  font-size: clamp(0.4rem, 2vw, 1rem);
-  flex-shrink: 0;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
-  box-sizing: border-box;
-}
-
-.system-clock {
-  font-family: 'IBM Plex Mono', monospace;
-  color: #88EC82;
-  text-shadow: 0 0 5px rgba(51, 255, 51, 0.4), 0 0 8px rgba(51, 255, 51, 0.2);
-  font-size: 0.9rem; /* Match the size of the "ONLINE REC" text */
-}
-
 .terminal-log {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-  text-align: right;
   padding:0 1rem;
   gap: 1rem;
   color: #88EC82;
@@ -123,7 +93,9 @@ header {
   overflow: hidden; 
   text-shadow: 0 0 5px rgba(51, 255, 51, 0.4), 0 0 8px rgba(51, 255, 51, 0.2);
   flex-shrink: 0;
-  height: clamp(5rem, 12vw, 6rem);;
+  height: clamp(5rem, 12vw, 6rem);
+  position: relative;
+  z-index: 2;
 }
 
 .cursor {
