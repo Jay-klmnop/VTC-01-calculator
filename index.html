@@ -15,38 +15,65 @@
 <body>
     <main class="vtc-container">
         <div class="calculator">
+            <div class="device-branding">
+                <span class="brand-name">VTC</span>
+                <span class="model-number">SERIES 200</span>
+            </div>
+            <div class="speaker-grill"></div>
             <div class="calculator-display">
-                <header>
-                    <div class="logo">Virtual Terminal Calculator - 01</div>
-                </header>
-                <p class="display-txt">
-                    <span class="cursor">_</span>
-                </p>
+                <div class="display-design">
+                    <header>
+                        <div class="header-status">
+                            <span style="color: lime;">◉</span> ONLINE
+                            <span style="color: red;">■</span> REC
+                        </div>
+                        <div id="system-clock" class="system-clock"></div>
+                    </header>
+                    <div class="terminal-log">
+                        <div class="history-log"></div>
+                    </div>    
+                    <p class="display-txt">
+                        <span class="cursor">_</span>
+                    </p>
+                </div>
             </div>
             <div class="buttons">
-                <button class="function button">CLR</button>
-                <button class="function button">+/-</button>
-                <button class="function button">%</button>
-                <button class="operator button">/</button>
-                <button class="number button">7</button>
-                <button class="number button">8</button>
-                <button class="number button">9</button>
-                <button class="operator button">*</button>
-                <button class="number button">4</button>
-                <button class="number button">5</button>
-                <button class="number button">6</button>
-                <button class="operator button">+</button>
-                <button class="number button">1</button>
-                <button class="number button">2</button>
-                <button class="number button">3</button>
-                <button class="operator button">-</button>
-                <button class="number zero button">0</button>
-                <button class="number button dot">.</button>
-                <button class="equals button">=</button>
+                <div class="button-wrapper">
+                    <div class="button-row" id="row-1">
+                        <button class="number one">1</button>
+                        <button class="number two">2</button>
+                        <button class="number three">3</button>
+                        <button class="number four">4</button>
+                        <button class="number">5</button>
+                        <button class="number">6</button>
+                        <button class="operator">+</button>
+                        <button class="operator">-</button>
+                        <button class="operator">*</button>
+                        <button class="operator">/</button>
+                    </div>
+                    <div class="button-row" id="row-2">
+                        
+                        <button class="number">7</button>
+                        <button class="number">8</button>
+                        <button class="number">9</button>
+                        <button class="number zero">0</button>
+                        <button class="number double zero">00</button>
+                        <button class="number dot">.</button>
+                        <button class="function">CLR</button>
+                        <button class="function">+/-</button>
+                        <button class="function">%</button>
+                        <button class="equals">=</button>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="terminal-log">
-            <div class="history-log"></div>
+            <div class="device-decoration">
+                <div class="knob"></div>
+                <div class="dent-container"></div>
+                <div class="slider">
+                    <div class="slider-track"></div>
+                    <div class="slider-thumb"></div>
+                </div>
+            </div>
         </div>
     </main>
 </body>

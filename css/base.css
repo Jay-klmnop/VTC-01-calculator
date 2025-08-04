@@ -27,16 +27,12 @@ body {
 }
 
 .vtc-container {
-    display: flex;
+    display: grid;
+    place-items: center;
     width: 90%;
     max-width: 900px;
-    min-width: 200px;
+    min-width: 300px;
     border-radius: 8px;
-}
-
-@media (max-width: 768px) {
-    .vtc-container {
-        flex-direction: column;
-        height: 90vh;
-    }
+    position: relative;
+    overflow: hidden;
 }
